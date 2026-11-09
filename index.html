@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121915">
+  <meta name="description" content="BountyHunters.pl Shop – sklep VIP dla Bounty Hunters, polskiego serwera Minecraft Java 1.21.1. Ranga VIP za 20 zł i przywileje łowcy.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bounty Hunters">
+  <meta property="og:title" content="BountyHunters.pl Shop | Bounty Hunters">
+  <meta property="og:description" content="Sklep VIP dla polskiego serwera Minecraft Bounty Hunters 1.21.1.">
+  <meta name="twitter:card" content="summary">
+  <title>BountyHunters.pl Shop | Bounty Hunters – Minecraft 1.21.1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Rye&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --forest: #30271e;
+      --forest-2: #493829;
+      --leaf: #9b5535;
+      --lime: #edc775;
+      --sun: #d68a4c;
+      --paper: #eee3ce;
+      --ink: #302a23;
+      --muted: #817360;
+      --line: #d9c9ad;
+      --white: #fbf5e8;
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; background: var(--paper); }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    .topline { background: #211b16; color: #eadfc9; text-align: center; padding: 9px 16px; font-size: 11px; letter-spacing: .08em; }
+    .topline strong { color: var(--lime); font-weight: 700; }
+    header { height: 76px; background: var(--white); display: flex; align-items: center; justify-content: space-between; padding: 0 max(6vw, 24px); border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--forest); font: 700 18px "Space Grotesk", sans-serif; letter-spacing: -.03em; }
+    .brand-mark { width: 34px; height: 34px; position: relative; background: var(--leaf); box-shadow: inset -8px -8px 0 #703b2a; image-rendering: pixelated; }
+    .brand-mark:before, .brand-mark:after { content: ""; position: absolute; background: var(--lime); width: 7px; height: 7px; top: 8px; }
+    .brand-mark:before { left: 7px; } .brand-mark:after { right: 7px; }
+    .nav { display: flex; align-items: center; gap: 30px; color: #647269; font-size: 13px; }
+    .nav a { color: inherit; text-decoration: none; }
+    .nav a:hover { color: var(--forest); }
+    .server-status { display: flex; align-items: center; gap: 8px; color: #735b3d; font-size: 12px; font-weight: 700; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #ce8b45; box-shadow: 0 0 0 3px #f4e7cf; }
+    main { overflow: hidden; }
+    .hero { min-height: 430px; position: relative; display: grid; grid-template-columns: 1.03fr .97fr; align-items: center; padding: 54px max(9vw, 28px) 68px; color: #fff8e9; background: var(--forest); isolation: isolate; }
+    .hero:before { content: ""; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(34,26,19,.97) 0%, rgba(48,37,27,.88) 45%, rgba(71,47,31,.38) 100%), url("https://images.unsplash.com/photo-1607513746994-51f730a44832?auto=format&fit=crop&w=1600&q=85") center 48% / cover; }
+    .hero:after { content: ""; height: 14px; position: absolute; z-index: -1; inset: auto 0 0; background: repeating-linear-gradient(90deg, #8b5638 0 46px, #70432e 46px 92px); box-shadow: 0 -7px 0 rgba(237,199,117,.75); }
+    .hero-copy { max-width: 500px; padding-bottom: 6px; }
+    .eyebrow { color: var(--lime); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; display: flex; gap: 9px; align-items: center; }
+    .eyebrow:before { content: ""; width: 23px; height: 2px; background: var(--sun); }
+    h1 { font: 400 clamp(42px, 5vw, 66px)/1.04 "Rye", Georgia, serif; margin: 19px 0 17px; max-width: 540px; }
+    h1 span { color: var(--lime); }
+    .hero-copy p { margin: 0; max-width: 400px; color: #e2d4bd; font-size: 15px; line-height: 1.7; }
+    .hero-cta { display: inline-flex; margin-top: 25px; padding: 13px 18px; align-items: center; gap: 22px; background: var(--sun); color: #263526; border: 0; font-weight: 700; text-decoration: none; font-size: 13px; box-shadow: 4px 4px 0 #a47737; transition: transform .18s, box-shadow .18s; }
+    .hero-cta:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #a47737; }
+    .hero-cta span { font-size: 18px; line-height: 10px; }
+    .hero-art { min-height: 300px; position: relative; display: grid; place-items: center; }
+    .hero-art:before { content: ""; position: absolute; width: min(320px, 90%); aspect-ratio: 1; border: 1px solid rgba(155,220,211,.55); border-radius: 50%; background: repeating-conic-gradient(from 10deg, rgba(173,219,199,.3) 0deg 1deg, transparent 1deg 30deg); box-shadow: 0 0 32px rgba(74,198,193,.24), inset 0 0 26px rgba(182,140,219,.12); opacity: .8; animation: rune-turn 60s linear infinite; }
+    .hero-art:after { content: "✧"; position: absolute; top: 5%; right: 12%; color: #a7eee0; font-size: 32px; text-shadow: 0 0 12px #80dfd7; animation: rune-glow 2.8s ease-in-out infinite alternate; }
+    .wanted-poster { width: min(250px, 78%); min-height: 280px; position: relative; padding: 20px 17px; display: flex; flex-direction: column; align-items: center; text-align: center; color: #39291d; background: #e9d4a9; border: 2px solid #8e603c; outline: 1px solid rgba(239,203,128,.5); outline-offset: 6px; box-shadow: 9px 10px 0 rgba(19,14,10,.42); transform: rotate(2deg); }
+    .wanted-poster { z-index: 1; }
+    .poster-label { font: 700 10px "Space Grotesk", sans-serif; letter-spacing: .2em; border-bottom: 1px solid #a87c4f; padding-bottom: 8px; width: 100%; }
+    .poster-title { margin: 9px 0 4px; font: 400 37px/1 "Rye", Georgia, serif; }
+    .poster-target { width: 122px; height: 92px; margin: 6px auto; display: grid; place-items: center; background: #be8a53; color: #32271d; border: 4px solid #765039; font-size: 54px; box-shadow: inset 0 0 0 4px rgba(239,218,175,.42); }
+    .poster-reward { margin-top: 5px; font: 400 21px "Rye", Georgia, serif; }
+    .poster-details { margin-top: 5px; font-size: 9px; letter-spacing: .1em; }
+    @keyframes rune-turn { to { transform: rotate(360deg); } }
+    @keyframes rune-glow { from { opacity: .45; transform: scale(.85); } to { opacity: 1; transform: scale(1.1); } }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 26px; padding: 17px max(9vw, 28px); background: #e1d2b8; color: #5e4d3a; font-size: 11px; font-weight: 600; }
+    .trust-row span { display: flex; align-items: center; gap: 8px; }
+    .trust-row i { width: 19px; height: 19px; display: grid; place-items: center; background: #c9ab7c; color: #3d2c20; font-style: normal; font-size: 12px; }
+    .shop { padding: 67px max(9vw, 28px) 78px; max-width: 1500px; margin: auto; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 30px; }
+    .section-kicker { color: #876847; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; font-size: 10px; }
+    h2 { font: 400 33px/1.1 "Rye", Georgia, serif; color: var(--forest); margin: 8px 0 0; }
+    .section-head p { color: #817360; margin: 0 0 3px; font-size: 12px; }
+    .rank-grid { display: grid; grid-template-columns: minmax(0, 520px); justify-content: center; align-items: stretch; gap: 17px; }
+    .rank-card { position: relative; display: flex; flex-direction: column; min-height: 350px; padding: 28px; background: var(--white); border: 1px solid #c9b28d; box-shadow: 5px 6px 0 #d7c4a4, 0 12px 25px rgba(49,36,23,.08); transition: transform .2s, box-shadow .2s; }
+    .rank-card:hover { transform: translateY(-3px); box-shadow: 7px 9px 0 #d7c4a4, 0 16px 27px rgba(49,36,23,.12); }
+    .rank-card.featured { border: 2px solid #9a6339; }
+    .popular { position: absolute; top: -12px; right: 16px; background: #8d392c; color: #fff0d3; padding: 6px 9px; font: 400 10px "Rye", Georgia, serif; letter-spacing: .08em; }
+    .rank-top { display: flex; align-items: center; gap: 13px; }
+    .rank-icon { width: 48px; height: 48px; display: grid; place-items: center; font-size: 24px; background: #efe0c2; border: 1px solid #d0b58a; }
+    .rank-name { font: 400 24px "Rye", Georgia, serif; color: var(--forest); }
+    .rank-sub { color: #817360; font-size: 11px; margin-top: 3px; }
+    .price { margin: 22px 0 2px; font: 700 34px "Space Grotesk", sans-serif; color: var(--ink); letter-spacing: -.04em; }
+    .price small { color: #7b867d; font: 500 11px "DM Sans", sans-serif; letter-spacing: 0; }
+    .rank-blurb { color: #71634f; font-size: 12px; margin: 4px 0 16px; line-height: 1.6; }
+    .perks { list-style: none; padding: 13px 0 17px; margin: 0; border-top: 1px solid #e5d9c3; display: grid; gap: 10px; color: #4e4132; font-size: 12px; }
+    .perks li:before { content: "✦"; color: #a45b37; font-weight: 700; margin-right: 9px; }
+    .buy { margin-top: auto; width: 100%; padding: 12px; border: 1px solid #cbd6c3; background: transparent; color: var(--forest); font-weight: 700; font-size: 12px; transition: background .15s, color .15s; }
+    .buy:hover, .featured .buy { background: #8d392c; color: #fff8e9; border-color: #8d392c; }
+    .featured .buy:hover { background: #672b24; }
+    .fine-print { margin: 19px 0 0; color: #817360; text-align: center; font-size: 10px; }
+    .bottom-band { background: #ded0b7; padding: 22px max(9vw, 28px); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .bottom-band strong { color: var(--forest); font: 700 14px "Space Grotesk", sans-serif; }
+    .bottom-band p { color: #75654f; font-size: 11px; margin: 4px 0 0; }
+    .copy-ip { border: 1px solid #bca27b; padding: 10px 13px; background: var(--white); color: var(--forest); font: 700 11px "Space Grotesk", sans-serif; white-space: nowrap; }
+    footer { display: flex; justify-content: space-between; gap: 16px; padding: 21px max(9vw, 28px); color: #817360; background: var(--white); font-size: 10px; }
+    .modal-backdrop { position: fixed; inset: 0; z-index: 5; display: none; place-items: center; padding: 18px; background: rgba(28,20,14,.72); }
+    .modal-backdrop.open { display: grid; animation: fade-in .16s ease-out; }
+    .modal { width: min(100%, 430px); position: relative; background: var(--white); padding: 29px; border: 1px solid #c9b28d; box-shadow: 8px 8px 0 rgba(28,20,14,.4); }
+    .modal h3 { margin: 0; color: var(--forest); font: 700 25px "Space Grotesk", sans-serif; }
+    .modal p { color: #71634f; font-size: 12px; line-height: 1.6; }
+    .close { position: absolute; top: 13px; right: 14px; border: 0; background: transparent; color: #738075; font-size: 22px; }
+    .order-summary { padding: 13px 0; margin: 17px 0; border-block: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; color: var(--forest); font-size: 13px; font-weight: 700; }
+    label { display: block; color: #536157; font-size: 11px; font-weight: 700; margin: 15px 0 7px; }
+    input { width: 100%; padding: 12px; border: 1px solid #d9dfd4; background: #fff; outline: none; color: var(--ink); font-size: 13px; }
+    input:focus { border-color: #78975a; box-shadow: 0 0 0 3px #e7eedc; }
+    .demo-note { margin: 14px 0 0; padding: 10px; background: #f3e5c8; color: #70512f !important; font-size: 10px !important; }
+    .confirm { margin-top: 8px; width: 100%; padding: 13px; background: #8d392c; color: #fff8e9; border: 0; font-size: 12px; font-weight: 700; }
+    .toast { position: fixed; bottom: 20px; left: 50%; z-index: 8; transform: translate(-50%, 20px); opacity: 0; pointer-events: none; background: #30271e; color: white; padding: 12px 17px; font-size: 12px; transition: .2s; }
+    .toast.show { transform: translate(-50%, 0); opacity: 1; }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @media (max-width: 760px) {
+      header { height: 65px; padding-inline: 20px; }
+      .nav { display: none; }
+      .hero { min-height: 565px; padding: 54px 25px 48px; grid-template-columns: 1fr; align-content: start; }
+      .hero:before { background: linear-gradient(90deg, rgba(34,26,19,.95), rgba(48,37,27,.78)), url("https://images.unsplash.com/photo-1607513746994-51f730a44832?auto=format&fit=crop&w=1000&q=80") center / cover; }
+      .hero-art { min-height: 205px; margin-top: 4px; }
+      .wanted-poster { min-height: 240px; transform: scale(.86) rotate(2deg); }
+      .trust-row { padding-inline: 24px; gap: 13px 20px; }
+      .shop { padding: 52px 22px 60px; }
+      .section-head { display: block; margin-bottom: 28px; }
+      .section-head p { margin-top: 10px; }
+      h2 { font-size: 29px; }
+      .rank-grid { grid-template-columns: 1fr; gap: 18px; }
+      .rank-card { min-height: 0; }
+      .bottom-band { padding: 20px 22px; }
+      footer { padding-inline: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *:before, *:after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+    :root { color-scheme: dark; --forest: #211a2b; --forest-2: #34263d; --leaf: #7669a5; --lime: #a6f1dc; --sun: #edc36a; --paper: #121915; --ink: #f0eee3; --muted: #a6aea5; --line: #3a3b3d; --white: #1c2420; color: var(--ink); background: var(--paper); }
+    body { color: var(--ink); background: repeating-linear-gradient(0deg, transparent 0 47px, rgba(166,241,220,.025) 48px), repeating-linear-gradient(90deg, transparent 0 47px, rgba(166,241,220,.025) 48px), var(--paper); }
+    .topline { background: #0c110f; color: #d5e0d8; border-bottom: 1px solid #34313c; }
+    header { background: #171d19; }
+    .brand { color: #f0eee3; }
+    .brand-mark { background: linear-gradient(145deg, #a6f1dc, #8b78b7); clip-path: polygon(50% 0, 94% 24%, 94% 76%, 50% 100%, 6% 76%, 6% 24%); box-shadow: 0 0 18px rgba(166,241,220,.25); }
+    .brand-mark:before { content: "✦"; background: none; color: #17201c; width: auto; height: auto; top: 5px; left: 8px; font-size: 19px; }
+    .brand-mark:after { content: none; }
+    .nav { color: #b4beb5; }
+    .nav a:hover { color: var(--lime); }
+    .server-status { color: var(--sun); }
+    .status-dot { background: var(--lime); box-shadow: 0 0 12px rgba(166,241,220,.75); }
+    .hero:before { background: linear-gradient(90deg, rgba(14,20,17,.96), rgba(26,24,36,.86) 55%, rgba(33,24,43,.48)), url("https://images.unsplash.com/photo-1607513746994-51f730a44832?auto=format&fit=crop&w=1600&q=85") center 48% / cover; }
+    .hero:after { height: 3px; background: linear-gradient(90deg, transparent, #a6f1dc 28%, #8878b6 68%, #edc36a, transparent); box-shadow: 0 0 20px rgba(166,241,220,.42); }
+    .hero-copy p { color: #c8d3ca; }
+    .hero-cta { background: var(--lime); color: #18221e; box-shadow: 0 0 24px rgba(166,241,220,.22); }
+    .hero-art:before { border-color: rgba(166,241,220,.62); background: repeating-conic-gradient(from 10deg, rgba(166,241,220,.32) 0deg 1deg, transparent 1deg 30deg); box-shadow: 0 0 38px rgba(93,220,188,.28), inset 0 0 30px rgba(153,115,198,.22); opacity: .9; }
+    .wanted-poster { color: #eee6d0; background: linear-gradient(145deg, #292536, #1a211e); border-color: #b39a60; outline-color: rgba(166,241,220,.54); box-shadow: 0 0 32px rgba(113,94,156,.22), 9px 10px 0 rgba(5,9,7,.55); }
+    .poster-label { color: var(--lime); border-color: #726483; }
+    .poster-target { background: #222b29; color: var(--lime); border-color: #9a8757; text-shadow: 0 0 18px var(--lime); box-shadow: inset 0 0 18px rgba(166,241,220,.16), 0 0 18px rgba(166,241,220,.12); }
+    .trust-row, .bottom-band { background: #1a2520; color: #c6d6cb; border-block: 1px solid #323a36; }
+    .trust-row i { background: #283932; color: var(--lime); }
+    .section-kicker { color: #a6c8b6; }
+    h2 { color: #f0eee3; }
+    .section-head p, .fine-print { color: #a6aea5; }
+    .rank-card { background: linear-gradient(145deg, #1d2823, #1d202a); color: var(--ink); border-color: #647c70; box-shadow: 0 0 30px rgba(85,199,164,.1), 0 14px 34px rgba(0,0,0,.24); }
+    .rank-card.featured { border-color: #a89462; }
+    .popular { background: #51416c; color: var(--lime); }
+    .rank-icon { background: #292a35; border-color: #766b96; color: var(--lime); text-shadow: 0 0 12px var(--lime); }
+    .rank-name { color: #f0dfab; }
+    .rank-sub, .price small { color: #b0b7ad; }
+    .rank-blurb { color: #c2cec3; }
+    .perks { border-color: #3c4540; color: #e0e5d9; }
+    .perks li:before { color: var(--lime); text-shadow: 0 0 9px rgba(166,241,220,.6); }
+    .perks code { padding: 2px 5px; background: #292638; color: #d0baff; border: 1px solid #51466b; }
+    .buy { border-color: #83c9b1; color: var(--lime); }
+    .buy:hover, .featured .buy { background: var(--lime); color: #18221e; border-color: var(--lime); box-shadow: 0 0 22px rgba(128,234,203,.22); }
+    .bottom-band strong { color: #f0dfab; }
+    .bottom-band p { color: #aeb8ad; }
+    .modal-backdrop { background: rgba(6,10,8,.82); }
+    .modal { background: #1c2420; border-color: #8d7a55; box-shadow: 0 0 35px rgba(104,87,150,.25), 0 18px 50px rgba(0,0,0,.5); }
+    .modal h3 { color: #f0dfab; }
+    .modal p { color: #c2cec3; }
+    label { color: #d0dace; }
+    input { border-color: #46524b; background: #121915; }
+    input:focus { border-color: var(--lime); box-shadow: 0 0 0 3px rgba(166,241,220,.12); }
+    .demo-note { background: #302b3b; color: #d4c6ee !important; border-left: 2px solid #a890d5; }
+    .confirm { background: var(--lime); color: #18221e; }
+    .toast { background: #242135; color: #e9e1d0; border: 1px solid #77669a; }
+    .server-links { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .site-link, .copy-ip { border: 1px solid #736596; padding: 10px 13px; background: #222530; color: var(--lime); font: 700 11px "Space Grotesk", sans-serif; text-decoration: none; white-space: nowrap; }
+    .site-link:hover, .copy-ip:hover { background: #302b3b; border-color: var(--lime); }
+    .discord-note { max-width: 760px; margin: 0 auto 38px; padding: 18px 20px; color: #d9e8df; background: #1d2326; border: 1px solid #55496e; box-shadow: 0 0 24px rgba(123,97,163,.12); font-size: 12px; line-height: 1.6; }
+    .discord-note strong { color: var(--lime); }
+    .discord-note code { padding: 2px 5px; color: #d0baff; background: #292638; border: 1px solid #51466b; }
+    @media (max-width: 760px) {
+      .server-links { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
+      .site-link, .copy-ip { text-align: center; white-space: normal; font-size: 10px; }
+      .discord-note { margin: 0 22px 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline"><strong>LIST GOŃCZY AKTYWNY</strong> &nbsp; Nagroda czeka na śmiałka</div>
+  <header>
+    <a class="brand" href="#home" aria-label="Strona główna Bounty Hunters"><span class="brand-mark" aria-hidden="true"></span> BOUNTY HUNTERS</a>
+    <nav class="nav" aria-label="Menu główne"><a href="#ranks">Ranga VIP</a><a href="#how-it-works">Jak dołączyć</a></nav>
+    <div class="server-status"><span class="status-dot"></span> MINECRAFT 1.21.1</div>
+  </header>
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow">Magia prowadzi trop</div>
+        <h1 id="hero-title">Bounty<br><span>Hunters</span></h1>
+        <p>Odkrywaj zaklęte szlaki, trop nagrody i zapisz się na liście najlepszych łowców. Ranga VIP wyróżni Cię w świecie Bounty Hunters.</p>
+        <a class="hero-cta" href="#ranks">ZGARNIJ RANGĘ VIP <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-label="Zaklęty list gończy za rangą VIP"><div class="wanted-poster" aria-hidden="true"><div class="poster-label">ZAKLĘTY LIST GOŃCZY</div><div class="poster-title">VIP</div><div class="poster-target">✦</div><div class="poster-reward">NAGRODA VIP</div><div class="poster-details">BOUNTY HUNTERS · WERSJA 1.21.1</div></div></div>
+    </section>
+    <div class="trust-row" aria-label="Informacje o sklepie">
+      <span><i>✓</i> Jednorazowy zakup</span><span><i>⌁</i> Tag VIP obok nicku</span><span><i>✦</i> Magiczne polowanie na nagrody</span><span><i>◎</i> Wersja Java 1.21.1</span>
+    </div>
+    <section class="shop" id="ranks" aria-labelledby="rank-title">
+      <div class="section-head">
+        <div><div class="section-kicker">BountyHunters.pl Shop · Karta łowcy</div><h2 id="rank-title">Ranga VIP</h2></div>
+        <p>Jedna ranga. Więcej możliwości na szlaku.</p>
+      </div>
+      <div class="rank-grid">
+        <article class="rank-card featured">
+          <div class="popular">LIST GOŃCZY</div>
+          <div class="rank-top"><div class="rank-icon" aria-hidden="true">✦</div><div><div class="rank-name">VIP</div><div class="rank-sub">Dla łowców, którzy celują wyżej</div></div></div>
+          <div class="price">20 zł <small>jednorazowo</small></div>
+          <p class="rank-blurb">Przyjmij kontrakt, zdobądź magiczne przywileje i pokaż wszystkim, że jesteś łowcą VIP.</p>
+          <ul class="perks"><li>Widoczny tag VIP obok nicku</li><li><code>/weather</code> — zmiana pogody</li><li><code>/ec</code> — dostęp do enderchesta</li><li><code>/near</code> — gracze w promieniu 100 bloków</li></ul>
+          <button class="buy" data-rank="VIP" data-price="20 zł">ZGARNIJ RANGĘ VIP</button>
+        </article>
+      </div>
+      <p class="fine-print">Ranga VIP jest przypisana do nicku z Minecrafta. Zakup jednorazowy.</p>
+    </section>
+    <aside class="discord-note"><strong>Przywilej VIP na Discordzie</strong> Tylko posiadacze rangi VIP mogą używać <code>@everyone</code> na kanale <code>#mc-ogólny</code> serwera Discord.</aside>
+    <section class="bottom-band" id="how-it-works"><div><strong>Dołącz do polowania</strong><p>Serwer Minecraft Java · wersja 1.21.1</p></div><div class="server-links"><a class="site-link" href="https://bountyhunters.pl" target="_blank" rel="noopener noreferrer">Otwórz bountyhunters.pl ↗</a><button class="copy-ip" id="copy-ip" type="button">Kopiuj IP serwera ⧉</button></div></section>
+  </main>
+  <footer><span>© 2026 Bounty Hunters</span><span>Serwer nie jest powiązany z Mojang ani Microsoft.</span></footer>
+  <div class="modal-backdrop" id="checkout" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <form class="modal" id="checkout-form">
+      <button class="close" type="button" aria-label="Zamknij okno">×</button>
+      <div class="section-kicker">Ostatni krok</div><h3 id="checkout-title">Odbierz rangę VIP</h3>
+      <p>Podaj nick z Minecrafta, aby przypisać do niego rangę.</p>
+      <div class="order-summary"><span id="summary-rank">Ranga VIP</span><span id="summary-price">20 zł</span></div>
+      <label for="username">Nick w Minecraft</label><input id="username" name="username" maxlength="16" pattern="[A-Za-z0-9_]{3,16}" placeholder="TwojNick" required autocomplete="off">
+      <label for="email">Adres e-mail do potwierdzenia</label><input id="email" name="email" type="email" placeholder="ty@example.com" required>
+      <p class="demo-note">To wersja demonstracyjna. Płatności i nadawanie rangi nie są jeszcze podłączone.</p>
+      <button class="confirm" type="submit">PRZEJDŹ DO ZAMÓWIENIA</button>
+    </form>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    const modal = document.querySelector('#checkout');
+    const form = document.querySelector('#checkout-form');
+    const toast = document.querySelector('#toast');
+    let lastFocusedElement;
+    document.querySelectorAll('.buy').forEach((button) => {
+      button.addEventListener('click', () => {
+        lastFocusedElement = button;
+        document.querySelector('#summary-rank').textContent = `Ranga ${button.dataset.rank}`;
+        document.querySelector('#summary-price').textContent = button.dataset.price;
+        modal.classList.add('open');
+        document.querySelector('#username').focus();
+      });
+    });
+    function closeModal() {
+      modal.classList.remove('open');
+      form.reset();
+      if (lastFocusedElement) lastFocusedElement.focus();
+    }
+    document.querySelector('.close').addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const player = document.querySelector('#username').value;
+      closeModal();
+      toast.textContent = `Dzięki, ${player}! Płatności nie są jeszcze podłączone.`;
+      toast.classList.add('show');
+      window.setTimeout(() => toast.classList.remove('show'), 3500);
+    });
+    document.querySelector('#copy-ip').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('bountyhunters.pl');
+        toast.textContent = 'Skopiowano IP serwera: bountyhunters.pl';
+      } catch {
+        toast.textContent = 'Adres serwera: bountyhunters.pl';
+      }
+      toast.classList.add('show');
+      window.setTimeout(() => toast.classList.remove('show'), 3000);
+    });
+  </script>
+</body>
+</html>
